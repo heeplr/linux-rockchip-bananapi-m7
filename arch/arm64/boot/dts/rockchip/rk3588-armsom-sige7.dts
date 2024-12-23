@@ -24,6 +24,15 @@
 	compatible = "rockchip,rk3588-armsom-sige7", "rockchip,rk3588";
 	/delete-node/ chosen;
 	
+	pmu: power-management@fd8d8000 {
+		power: power-controller {
+			power-domain@RK3588_PD_AUDIO {
+				compatible = "rockchip,power-domain";
+				audio-supply = <&pcie30_avdd0v75>;
+			};
+		};
+	};
+
 	vcc12v_dcin: vcc12v-dcin {
 		compatible = "regulator-fixed";
 		regulator-name = "vcc12v_dcin";
@@ -136,6 +145,7 @@
 		regulator-min-microvolt = <750000>;
 		regulator-max-microvolt = <750000>;
 		vin-supply = <&avdd_0v75_s0>;
+		startup-delay-us = <50000>;
 	};
 
 	pcie30_avdd1v8: pcie30-avdd1v8 {

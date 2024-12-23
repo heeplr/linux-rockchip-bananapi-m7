@@ -341,6 +341,7 @@
 				regulator-boot-on;
 				regulator-min-microvolt = <750000>;
 				regulator-max-microvolt = <750000>;
+				regulator-ramp-delay = <25000>;
 				regulator-name = "vdd_0v75_s3";
 				regulator-state-mem {
 					regulator-on-in-suspend;
@@ -365,6 +366,7 @@
 				regulator-boot-on;
 				regulator-min-microvolt = <837500>;
 				regulator-max-microvolt = <837500>;
+				regulator-ramp-delay = <25000>;
 				regulator-name = "avdd_0v75_s0";
 				regulator-state-mem {
 					regulator-off-in-suspend;
@@ -388,6 +390,7 @@
 				regulator-min-microvolt = <750000>;
 				regulator-max-microvolt = <750000>;
 				regulator-name = "vdd_0v75_s0";
+				regulator-ramp-delay = <25000>;
 				regulator-state-mem {
 					regulator-off-in-suspend;
 				};
