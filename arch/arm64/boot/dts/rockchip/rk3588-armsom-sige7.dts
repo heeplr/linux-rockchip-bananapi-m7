@@ -87,6 +87,7 @@
 	};
 
 	hdmi0_sound: hdmi0-sound {
+		status = "disabled";
 		compatible = "rockchip,hdmi";
 		rockchip,mclk-fs = <128>;
 		rockchip,card-name = "rockchip-hdmi0";
@@ -96,6 +97,7 @@
 	};
 
 	dp0_sound: dp0-sound {
+		status = "disabled";
 		compatible = "rockchip,hdmi";
 		rockchip,card-name= "rockchip-dp0";
 		rockchip,mclk-fs = <512>;
@@ -122,6 +124,7 @@
 	};
 
 	es8316_sound: es8316-sound {
+		status = "disabled";
 		compatible = "simple-audio-card";
 		simple-audio-card,format = "i2s";
 		simple-audio-card,mclk-fs = <256>;
@@ -266,28 +269,28 @@
 };
 
 &dp0 {
-	status = "okay";
+	status = "disabled";
 };
 &dp0_in_vp2 {
-	status = "okay";
+	status = "disabled";
 };
 
 &gpu {
 	mali-supply = <&vdd_gpu_s0>;
 	mem-supply = <&vdd_gpu_mem_s0>;
-	status = "okay";
+	status = "disabled";
 };
 
 &hdmi0 {
-	status = "okay";
+	status = "disabled";
 };
 
 &hdmi0_in_vp0 {
-	status = "okay";
+	status = "disabled";
 };
 
 &hdptxphy_hdmi0 {
-	status = "okay";
+	status = "disabled";
 };
 
 &i2c0 {
@@ -336,6 +339,7 @@
 	pinctrl-0 = <&i2c1m2_xfer>;
 
 	vdd_npu_s0: vdd_npu_mem_s0: rk8602@42 {
+		status = "disabled";
 		compatible = "rockchip,rk8602";
 		reg = <0x42>;
 		vin-supply = <&vcc5v0_sys>;
@@ -492,7 +496,7 @@
 	clock-frequency = <400000>;
 
 	es8316: es8316@11 {
-		status = "okay";
+		status = "disabled";
 		#sound-dai-cells = <0>;
 		compatible = "everest,es8316";
 		reg = <0x11>;
@@ -507,19 +511,19 @@
 
 
 &i2s5_8ch {
-	status = "okay";
+	status = "disabled";
 };
 
 &i2s6_8ch {
-	status = "okay";
+	status = "disabled";
 };
 
 &i2s7_8ch {
-	status = "okay";
+	status = "disabled";
 };
 
 &i2s0_8ch {
-	status = "okay";
+	status = "disabled";
 	pinctrl-0 = <&i2s0_lrck
 		     &i2s0_sclk
 		     &i2s0_sdi0
@@ -535,47 +539,47 @@
 };
 
 &jpegd {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpegd_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege_ccu {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege0 {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege0_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege1 {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege1_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege2 {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege2_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege3 {
-	status = "okay";
+	status = "disabled";
 };
 
 &jpege3_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &mdio1 {
@@ -586,7 +590,7 @@
 };
 
 &mipi_dcphy0 {
-	status = "okay";
+	status = "disabled";
 };
 
 &mpp_srv {
@@ -723,77 +727,77 @@
 };
 
 &rga2 {
-	status = "okay";
+	status = "disabled";
 };
 
 &rga3_core0 {
-	status = "okay";
+	status = "disabled";
 };
 
 &rga3_0_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rga3_core1 {
-	status = "okay";
+	status = "disabled";
 };
 
 &rga3_1_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rknpu {
 	rknpu-supply = <&vdd_npu_s0>;
 	mem-supply = <&vdd_npu_mem_s0>;
-	status = "okay";
+	status = "disabled";
 };
 
 &rknpu_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvdec_ccu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvdec0 {
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvdec0_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvdec1 {
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvdec1_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvenc_ccu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvenc0 {
 	venc-supply = <&vdd_vdenc_s0>;
 	mem-supply = <&vdd_vdenc_mem_s0>;
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvenc0_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvenc1 {
 	venc-supply = <&vdd_vdenc_s0>;
 	mem-supply = <&vdd_vdenc_mem_s0>;
-	status = "okay";
+	status = "disabled";
 };
 
 &rkvenc1_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &rockchip_suspend {
@@ -802,11 +806,11 @@
 };
 
 &route_hdmi0 {
-	status = "okay";
+	status = "disabled";
 };
 
 &route_dp0 {
-	status = "okay";
+	status = "disabled";
 	connect = <&vp2_out_dp0>;
 };
 
@@ -844,7 +848,7 @@
 };
 
 &spdif_tx2 {
-	status = "okay";
+	status = "disabled";
 };
 
 &tsadc {
@@ -915,7 +919,7 @@
 };
 
 &usbdp_phy0_dp {
-	status = "okay";
+	status = "disabled";
 };
 
 &usbdp_phy0_u3 {
@@ -979,42 +983,46 @@
 };
 
 &vdpu {
-	status = "okay";
+	status = "disabled";
 };
 
 &vdpu_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 &vepu {
-	status = "okay";
+	status = "disabled";
 };
 
 &vop {
-	status = "okay";
+	status = "disabled";
 };
 
 &vop_mmu {
-	status = "okay";
+	status = "disabled";
 };
 
 /* vp0 & vp1 splice for 8K output */
 &vp0 {
+	status = "disabled";
 	rockchip,plane-mask = <(1 << ROCKCHIP_VOP2_CLUSTER0 | 1 << ROCKCHIP_VOP2_ESMART0)>;
 	rockchip,primary-plane = <ROCKCHIP_VOP2_ESMART0>;
 };
 
 &vp1 {
+	status = "disabled";
 	rockchip,plane-mask = <(1 << ROCKCHIP_VOP2_CLUSTER1 | 1 << ROCKCHIP_VOP2_ESMART1)>;
 	rockchip,primary-plane = <ROCKCHIP_VOP2_ESMART1>;
 };
 
 &vp2 {
+	status = "disabled";
 	rockchip,plane-mask = <(1 << ROCKCHIP_VOP2_CLUSTER2 | 1 << ROCKCHIP_VOP2_ESMART2)>;
 	rockchip,primary-plane = <ROCKCHIP_VOP2_ESMART2>;
 };
 
 &vp3 {
+	status = "disabled";
 	rockchip,plane-mask = <(1 << ROCKCHIP_VOP2_CLUSTER3 | 1 << ROCKCHIP_VOP2_ESMART3)>;
 	rockchip,primary-plane = <ROCKCHIP_VOP2_ESMART3>;
 };
