@@ -3428,6 +3428,7 @@
 				pm_qos = <&qos_sdio>;
 			};
 			power-domain@RK3588_PD_AUDIO {
+				status = "disabled";
 				reg = <RK3588_PD_AUDIO>;
 				clocks = <&cru HCLK_AUDIO_ROOT>,
 					 <&cru PCLK_AUDIO_ROOT>;
